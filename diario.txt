@@ -1,0 +1,42 @@
+2015.09.28
+repasadas las fases de compilación
+·preprocesado
+gcc -E holamundo.c > holamundo.preprocesado
+·compilación
+gcc -S holamundo.c (-> holamundo.s ensamblador)
+·ensamblado
+gcc -c holamundo.c (-> holamundo.o código objeto)
+·enlazado
+gcc -o holamundo.exe holamundo.c (-> holamundo.c código máquina)
+
+
+
+
+2015.09.23
+realizado holamundo.c
+proceso de compilacion con E, S y c
+
+
+
+Instalar git
+sudo apt -get install git
+
+creamos un repositorio en github
+antes, si no eres usuario, debes crear uno 
+git config --global user.name _____
+git config --global user.email _______
+
+clonamos el repositorio de github
+git clone https://github.com/andre27593/ed2.git
+
+gedit hola-mundo-git.txt
+
+git add .
+git config --global user.name andre27593
+git config --global user.email dam.aolivero@institutoserpis.org
+
+git commit -m"Hola mundo desde git"
+
+git config --global push.default simple
+git push
+   
