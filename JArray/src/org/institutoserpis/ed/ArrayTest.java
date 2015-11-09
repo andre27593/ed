@@ -40,5 +40,7 @@ public class ArrayTest {
 		int v[]=new int[]{9,8,12,7};
 		Array.sort(v);
 		assertArrayEquals(new int[] {7,8,9,12}, v);
+		
+		
 	}
 }

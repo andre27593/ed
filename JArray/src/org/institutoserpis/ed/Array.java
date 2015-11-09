@@ -18,7 +18,7 @@ public class Array {
 		
 		
 		System.out.println("El valor menor de v es: " +menor(v));
-		System.out.println("El valor menor de v es: " +indexOf(v,21));
+		System.out.println("El indice de 12 en v es: " +indexOf(v,12));
 	
 	}
 
@@ -41,31 +41,32 @@ public class Array {
 
 	public static int menor(int[] v){
 		
-//		int menor=v[0];
-//			for(int index=1;index<v.length;index++){
+	int menor=v[0];
+			for(int index=1;index<v.length;index++){
 				
-	//		if(v[index]<menor){
+		if(v[index]<menor){
 					
-		//		menor=v[index];
+		menor=v[index];
 					
-			//	}
-				
-				
-		//	}
-		
-		
-	//	return menor;
-		
-		
-		int posMenor=0;
-		for(int index=1;index<v.length;index++)
-			if(v[index]<v[posMenor])
-				posMenor=index;
-		return v[posMenor];
-		
 	}
+				
+				
+	}
+		
+		
+	return menor;
+	}
+		
+//		int posMenor=0;
+	//	for(int index=1;index<v.length;index++)
+		//	if(v[index]<v[posMenor])
+			//	posMenor=index;
+	//	return v[posMenor];
+		
+//	}
 	
 	public static void sort(int[] v){
+		
 		
 		
 	}
