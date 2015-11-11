@@ -1,3 +1,12 @@
+2015.11.09
+instalamos:
+	monodevelop
+	monodevelop-nunit
+	monodevelop-versioncontrol
+	monodevelop-browser
+
+
+
 2015.09.28
 repasadas las fases de compilación
 ·preprocesado
