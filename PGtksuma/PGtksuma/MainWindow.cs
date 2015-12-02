@@ -16,9 +16,9 @@ public partial class MainWindow: Gtk.Window
 
 	protected void OnButton4Clicked (object sender, EventArgs e)
 	{
-		Decimal Numero1 = Decimal.Parse (entry4.Text);
-		Decimal Numero2 = Decimal.Parse (entry5.Text);
-		Decimal Resultado = Numero1+Numero2;
-		label3.Text = Resultado.ToString ();	
+		Decimal Numero1 = Decimal.Parse (entry4.Text); //Un numero a decimal
+		Decimal Numero2 = Decimal.Parse (entry5.Text); //El otro numero a decimal
+		Decimal Resultado = Numero1+Numero2; //Suma de los dos numeros
+		label3.Text = Resultado.ToString ();	//Que el resultado salga en la casilla de Resultado
 	}
 }
