@@ -13,9 +13,10 @@ public class Categoria {
     public long id;
     public String nombre;
 
-    public Categoria(String nombre, long id) {
-        this.nombre = nombre;
-        this.id = id;
+    public Categoria(long id, String nombre) {
+
+        this.id=id;
+        this.nombre=nombre;
     }
 
     public String toString(){
@@ -24,8 +25,6 @@ public class Categoria {
 
     }
 
-    public List<Categoria> getCategorias() {
-    }
 
 
 

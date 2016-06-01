@@ -3,9 +3,13 @@ package com.mycompany.acategoria;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.BaseColumns;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by mati on 25/05/16.
@@ -66,6 +70,25 @@ public class DbPruebaHelper extends SQLiteOpenHelper {
         contentValues.put(TableCategoria.COLUMN_NOMBRE, nombre);
         return sqLiteDatabase.insert(TableCategoria.NAME,null,contentValues);
 
+    }
+
+    public List<Categoria> getCategorias(){
+
+        SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+        String[] columns = new String[]{
+
+                TableCategoria._ID,
+                TableCategoria.COLUMN_NOMBRE
+
+        };
+
+        List<Categoria> categorias = new ArrayList<>();
+
+        Cursor cursor = sqLiteDatabase.query(TableCategoria.NAME, columns, null,null,null,null,null);
+        while(cursor.moveToNext())
+            categorias.add(new Categoria(cursor.getLong(0), cursor.getString(1)));
+        cursor.close();
+        return categorias;
     }
 
 }
